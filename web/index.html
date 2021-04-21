@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>xml파싱예제</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        #here {
+            border: 1px solid red;
+        }
+
+        #here2 {
+            border: 1px solid blue;
+        }
+
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr:first-child {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<!-- xml정보  -->
+
+<script>
+    $(function () {
+        const ServiceKey = 'E%2BZTrGwIlQduLFIYgx4BLluIr5uMHb%2FqqhckInIDSU9jG7cf549CZ3%2BXfANRqOTNmE3w4gNsA6rbA%2B4B8PIgWw%3D%3D'
+        var xhr = new XMLHttpRequest();
+        var url = 'http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc/sido'; /*URL*/
+        var queryParams = '?' + encodeURIComponent('ServiceKey') + '=' + ServiceKey; /*Service Key*/
+        xhr.open('GET', url + queryParams);
+
+        xhr.send('');
+        xhr.onreadystatechange = function a() {
+            if (this.readyState === 4) {
+                var ex = `<table>
+	    		<tr>
+	    		<td>orgCd</td>
+	    		<td>orgdownNm</td>
+	    	    </tr>`;
+                var xml = xhr.responseXML;
+                var items1 = xml.getElementsByTagName("orgCd");
+                var items2 = xml.getElementsByTagName("orgdownNm");
+
+                for (var i = 0; i < items1.length; i++) {
+                    var name1 = items1[i].childNodes[0].nodeValue;
+                    var name2 = items2[i].childNodes[0].nodeValue;
+
+                    ex += "<tr>" +
+                        "<td>" + name1 + "</td>" +
+                        "<td>" + name2 + "</td>";
+                }
+                ex += "</tr>"
+
+            }
+            here.innerHTML = ex + "</table>";
+        };
+
+
+        var url2 = 'http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc/sigungu?upr_cd=6110000&ServiceKey=' + ServiceKey;
+        var xhr2 = new XMLHttpRequest();
+        xhr2.open('GET', url2);
+        xhr2.send('');
+        var ex = `<table>
+		<tr>
+		<td>orgCd</td>
+		<td>orgdownNm</td>
+		<td>uprCd</td>
+
+	</tr>`;
+
+        xhr2.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                var xml = xhr2.responseXML;
+                var items1 = xml.getElementsByTagName("orgCd");
+                var items2 = xml.getElementsByTagName("orgdownNm");
+                var items3 = xml.getElementsByTagName("uprCd");
+                for (var i = 0; i < items1.length; i++) {
+                    var name1 = items1[i].childNodes[0].nodeValue;
+                    var name2 = items2[i].childNodes[0].nodeValue;
+                    var name3 = items3[i].childNodes[0].nodeValue;
+                    ex += "<tr>" +
+                        "<td>" + name1 + "</td>" +
+                        "<td>" + name2 + "</td>" +
+                        "<td>" + name3 + "</td>";
+
+                }
+                ex += "</tr>"
+
+
+            }
+            here2.innerHTML = ex + "</table>";
+        };
+
+
+    });
+
+</script>
+
+
+<div id="here">요기요</div>
+<div id="here2">요기요2</div>
+</body>
+</html>
