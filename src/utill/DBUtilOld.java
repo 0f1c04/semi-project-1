@@ -6,8 +6,24 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.*;
 
-public class DBUtil {
+public class DBUtilOld {
     //1.DB 연결
+//    public static Connection getConnection() {
+//        String driverName = "oracle.jdbc.driver.OracleDriver";
+//        String url = "jdbc:oracle:thin:@localhost:1521:XE";
+//        String userID = "hr", password = "hr";
+//        Connection conn = null;
+//
+//        try {
+//            Class.forName(driverName);
+//            conn = DriverManager.getConnection(url, userID, password);
+//        } catch (ClassNotFoundException | SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return conn;
+//    }
+
     public static Connection getConnection() {
         Connection conn = null;
         Context initContext = null;

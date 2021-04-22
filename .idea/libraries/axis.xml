@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="axis">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/axis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/commons-discovery-0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.annotation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.ejb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.jms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.persistence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.resource.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.servlet.jsp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.servlet.jsp.jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/javax.transaction.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/jaxrpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/log4j-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/ojdbc8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/saaj.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ServletEducation/lib/wsdl4j-1.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

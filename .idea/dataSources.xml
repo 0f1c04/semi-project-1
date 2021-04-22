@@ -8,5 +8,12 @@
       <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@192.168.0.110:1521:XE</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="@project" uuid="9f88cb0f-cff6-4a82-a199-d22ed854d5e1">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@bowmeow.cff1aysmk2f2.us-east-1.rds.amazonaws.com:1521:KOSTA</jdbc-url>
+    </data-source>
   </component>
 </project>

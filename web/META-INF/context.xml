@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="ServletEducation" path="/ServletEducation" reloadable="true">
+
+<Resource name="jdbc/myoracle" auth="Container"
+          type="javax.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver"
+          url="jdbc:oracle:thin:@bowmeow.cff1aysmk2f2.us-east-1.rds.amazonaws.com:1521:KOSTA"
+          username="kosta" password="kosta2021" maxTotal="20" maxIdle="10"
+          maxWaitMillis="-1"/>
+
+</Context>
